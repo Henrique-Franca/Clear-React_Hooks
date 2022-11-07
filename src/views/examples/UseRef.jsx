@@ -4,7 +4,7 @@ import SectionTitle from '../../components/layout/SectionTitle'
 
 const merge = function (s1, s2){
 
-    return s1 + s2;
+    return s1+ s2;
 
 }
 
@@ -20,8 +20,8 @@ const UseRef = (props) => {
 
     useEffect(function(){
     
-    count.current = count.current + 1;
-    myInput2.current.focus()
+        count.current = count.current + 1;
+        myInput2.current.focus();
 
     },[value1])
 
@@ -45,7 +45,7 @@ const UseRef = (props) => {
                 
                 <div>
                     <span className="text">Valor: </span>
-                    <span className="text">{merge(value1, value2)} [</span>
+                    <span className="text">{merge(value1,value2)} [</span>
                     <span className="tex red">{count.current}</span>
                     <span className="text">]</span>
                 </div>
@@ -59,6 +59,7 @@ const UseRef = (props) => {
             <div className="center">
 
                 <input type="text" className="input" 
+                ref={myInput2}
                     value={value2} onChange={e => setValue2(e.target.value)}/>
 
             </div>
