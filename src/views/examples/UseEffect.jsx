@@ -14,6 +14,7 @@ function calcFatorial(num){
 
 const UseEffect = (props) => {
 
+    //ex #01
     const [number,setNumber] = useState(1);
     const [fatorial, setFatorial] = useState(1);
 
@@ -32,6 +33,18 @@ const UseEffect = (props) => {
         }
 
     }, [fatorial])
+    //----------------------------
+
+    //ex #02
+    const [status, setStatus] = useState("Ímpar")
+
+    useEffect(function(){
+
+        setStatus(number % 2 === 0 ? 'Par' : 'Impar')
+
+    }, [number])
+
+    //----------------------------
 
     return (
         <div className="UseEffect">
@@ -50,7 +63,15 @@ const UseEffect = (props) => {
                 value={number} onChange={e => setNumber(e.target.value)}/>
             </div>
 
+            
+
             <SectionTitle title='Exercício #02 '/>
+            <div className='center'>
+                <div>
+                    <span className="text">Status: </span>
+                    <span className="text red">{status}</span>
+                </div>
+            </div>
 
 
         </div>
