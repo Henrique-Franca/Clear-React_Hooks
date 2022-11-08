@@ -13,7 +13,7 @@ const Store = props =>{
 
     const [state, setState] = useState(initialState)
 
-    function updateState(key, value){
+    function updateState(key, value ){
         setState({
             ...state,
             [key]: value
