@@ -1,9 +1,7 @@
-import { numberAdd2 } from "./Number";
-import { login } from "./User";
+import { numberAdd2 } from './number'
+import { login } from './user'
 
-export{
+export {
     numberAdd2,
     login
 }
-
-

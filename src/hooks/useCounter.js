@@ -13,10 +13,3 @@ export const useCounter = (initialValue = 100) => {
 
     return [count, inc, dec]
 }
-
-
-
-
-
-
-
